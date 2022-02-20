@@ -1,11 +1,11 @@
-import "reflect-metadata";
-import "dotenv/config";
-import { buildSchema } from "type-graphql";
-import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
-import { makeExecutableSchema } from "@graphql-tools/schema";
-import { startApolloServer } from "./apollo-server";
-import { initDataLayer } from "./orm";
-import { resolvers } from "./orm/@generated/type-graphql";
+import 'reflect-metadata';
+import 'dotenv/config';
+import { buildSchema } from 'type-graphql';
+import { ApolloServerPluginLandingPageGraphQLPlayground } from 'apollo-server-core';
+import { makeExecutableSchema } from '@graphql-tools/schema';
+import { startApolloServer } from './apollo-server';
+import { initDataLayer } from './orm';
+import { resolvers } from './orm/@generated/type-graphql';
 
 export const getGraphqlSchema = async (): Promise<any> => {
   const schema = await await buildSchema({

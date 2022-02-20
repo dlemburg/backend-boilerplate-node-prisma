@@ -1,10 +1,10 @@
-import * as TypeGraphQL from "type-graphql";
+import * as TypeGraphQL from 'type-graphql';
 
 export enum UserKind {
-  NORMAL = "NORMAL",
-  ADMIN = "ADMIN"
+  NORMAL = 'NORMAL',
+  ADMIN = 'ADMIN',
 }
 TypeGraphQL.registerEnumType(UserKind, {
-  name: "UserKind",
+  name: 'UserKind',
   description: undefined,
 });

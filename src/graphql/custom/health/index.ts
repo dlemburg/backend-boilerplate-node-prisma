@@ -1,5 +1,5 @@
-import HealthResolver from "./resolver";
-import HealthTypeDefs from "./typedefs";
+import HealthResolver from './resolver';
+import HealthTypeDefs from './typedefs';
 
 const resolvers = HealthResolver;
 const typedefs = HealthTypeDefs;
