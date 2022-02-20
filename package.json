@@ -8,7 +8,7 @@
     "compile": "tsc",
     "prepare": "husky install",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prettier:check": "prettier --config .prettierrc --write \"./**/*.{ts}\"",
+    "prettier:check": "prettier --config .prettierrc --write \"src/**/*.ts\"",
     "build": "tsc -p .",
     "start": "npm run compile && pm2 start dist/index.js",
     "start:dev": "ts-node src/index.ts"
@@ -23,6 +23,7 @@
     "apollo-server-express": "^3.5.0",
     "body-parser": "^1.19.1",
     "class-validator": "^0.13.2",
+    "db-migrate": "^0.11.13",
     "dotenv": "^16.0.0",
     "express": "^4.17.2",
     "graphql": "^15.8.0",
@@ -30,21 +31,21 @@
     "graphql-middleware": "^6.1.13",
     "graphql-scalars": "^1.14.1",
     "reflect-metadata": "^0.1.13",
-    "ts-node": "^10.4.0",
     "ts-jest": "^27.1.0",
+    "ts-node": "^10.4.0",
     "tslib": "^2.3.1",
     "type-graphql": "^1.1.1"
   },
   "devDependencies": {
-    "prisma": "~3.9.2",
-    "typegraphql-prisma": "^0.19.0",
-    "jest": "^27.4.3",
     "eslint": "8.9.0",
     "eslint-config-next": "12.0.10",
     "eslint-config-prettier": "^8.3.0",
     "husky": "^7.0.4",
+    "jest": "^27.4.3",
     "lint-staged": "^12.3.4",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "prisma": "~3.9.2",
+    "typegraphql-prisma": "^0.19.0"
   },
   "lint-staged": {
     "*.ts": "npm run prettier:check"
