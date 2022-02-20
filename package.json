@@ -6,12 +6,12 @@
   "scripts": {
     "generate": "npx prisma generate --schema=./src/orm/schema.prisma",
     "compile": "tsc",
+    "prepare": "husky install",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier:check": "prettier --config .prettierrc --write \"./**/*.{ts}\"",
     "build": "tsc -p .",
     "start": "npm run compile && pm2 start dist/index.js",
-    "prettier:check": "prettier --config .prettierrc --write \"./**/*.{ts}\"",
-    "start:dev": "ts-node src/index.ts",
-    "prepare": "husky install"
+    "start:dev": "ts-node src/index.ts"
   },
   "author": "",
   "license": "MIT",
