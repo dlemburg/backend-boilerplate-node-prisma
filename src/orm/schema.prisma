@@ -1,0 +1,26 @@
+
+datasource postgres {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator typegraphql {
+  provider = "typegraphql-prisma"
+  output   = "./@generated/type-graphql"
+}
+
+enum UserKind {
+  NORMAL
+  ADMIN
+}
+
+model User {
+  id    String  @default(cuid()) @id @unique
+  email String  @unique
+  age   Int?
+  kind  UserKind
+}
