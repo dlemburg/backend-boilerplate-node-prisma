@@ -12,7 +12,6 @@ export const getGraphqlSchema = async (): Promise<any> => {
     resolvers,
     validate: false,
   });
-  // const schema = makeExecutableSchema(customSchema as any);
 
   return {
     schema,
